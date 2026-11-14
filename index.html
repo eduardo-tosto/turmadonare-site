@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turma do Naré — alfabetização com cidadania</title>
+<meta name="description" content="Atividades de alfabetização para imprimir, para o 1º e o 2º ano, com o Naré e a Turma do Naré: letras, sílabas e leitura junto com convivência e direitos da criança.">
+<meta property="og:title" content="Turma do Naré — alfabetização com cidadania">
+<meta property="og:description" content="Kits de atividades para imprimir, para o 1º e 2º ano. Baixe uma amostra grátis.">
+<meta property="og:image" content="img/kit-alfabeto.png">
+<link rel="icon" href="img/nare-perfil.png">
+<style>
+  :root {
+    --verde: #2E9E6B; --verde-escuro: #25875B; --amarelo: #F6B73C; --creme: #FFF8EC;
+    --marrom: #3b2a1a; --texto: #2b2b2b; --cinza: #6b6b6b; --branco: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; height: auto; }
+  .hero .wrap > *, .kit > *, .nare > *, .amostra > *, .previas > * { min-width: 0; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--creme); color: var(--texto);
+         font-family: "Arial Rounded MT Bold", "Nunito", "Helvetica Neue", Arial, sans-serif; line-height: 1.55; }
+  a { color: var(--verde-escuro); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  header { background: var(--branco); border-bottom: 3px solid var(--amarelo); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 12px; }
+  .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--verde); font-size: 22px; }
+  .marca img { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--amarelo); }
+  nav a { margin-left: 18px; text-decoration: none; color: var(--marrom); font-size: 15px; }
+  .btn { display: inline-block; background: var(--amarelo); color: var(--marrom); text-decoration: none;
+         padding: 14px 26px; border-radius: 999px; font-size: 18px; box-shadow: 0 4px 0 #d99a20; }
+  .btn:hover { transform: translateY(1px); box-shadow: 0 3px 0 #d99a20; }
+  .btn.verde { background: var(--verde); color: var(--branco); box-shadow: 0 4px 0 var(--verde-escuro); }
+  .hero { padding: 56px 0 40px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: center; }
+  .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 16px; color: var(--marrom); }
+  .hero h1 span { color: var(--verde); }
+  .hero p { font-size: 19px; margin: 0 0 24px; max-width: 34em; }
+  .hero img { width: 100%; max-width: 340px; display: block; margin: 0 auto; }
+  section { padding: 48px 0; }
+  section.branco { background: var(--branco); }
+  h2 { font-size: clamp(26px, 3.5vw, 36px); color: var(--marrom); margin: 0 0 12px; }
+  .sub { color: var(--cinza); margin: 0 0 28px; font-size: 17px; }
+  .kit { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: center; }
+  .kit img { width: 100%; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+  .kit ul { padding-left: 20px; margin: 0 0 22px; }
+  .kit li { margin: 6px 0; }
+  .preco { font-size: 28px; color: var(--verde); margin: 0 0 16px; }
+  .previas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .previas figure { margin: 0; background: var(--branco); border-radius: 12px; padding: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.07); }
+  .previas img { width: 100%; display: block; border-radius: 6px; border: 1px solid #eee; }
+  .previas figcaption { text-align: center; font-size: 14px; color: var(--cinza); padding-top: 6px; }
+  .amostra { background: var(--verde); color: var(--branco); border-radius: 24px; padding: 36px; display: grid;
+             grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+  .amostra h2 { color: var(--branco); }
+  .amostra p { margin: 0 0 8px; font-size: 17px; }
+  .amostra small { opacity: .9; }
+  .amostra small a { color: var(--branco); }
+  .nare { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+  .nare img { width: 220px; }
+  .selo { display: inline-block; border: 2px solid #ccc; border-radius: 10px; padding: 8px 14px; color: var(--cinza); font-size: 14px; background: var(--branco); }
+  footer { background: var(--marrom); color: #f3e9dc; padding: 28px 0; font-size: 14px; }
+  footer a { color: #f3e9dc; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  @media (max-width: 780px) {
+    nav { display: none; }
+    .hero .wrap, .kit, .nare, .amostra { grid-template-columns: 1fr; }
+    .hero img { max-width: 220px; }
+    .previas { grid-template-columns: repeat(2, 1fr); }
+    .nare img { width: 160px; margin: 0 auto; display: block; }
+    .amostra { padding: 26px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="marca" href="#"><img src="img/nare-perfil.png" alt="Naré">Turma do Naré</a>
+    <nav><a href="#kit">Kits</a><a href="#previa">Prévia</a><a href="#amostra">Amostra grátis</a><a href="#nare">O Naré</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Alfabetização com <span>cidadania</span>, do jeito do Naré</h1>
+      <p>Atividades para imprimir, para o <b>1º e o 2º ano</b>: letras, sílabas, leitura e escrita junto com convivência, respeito e direitos da criança. Cada atividade indica a habilidade da BNCC.</p>
+      <a class="btn" href="#amostra">Baixar amostra grátis</a>
+      &nbsp; <a class="btn verde" href="https://go.hotmart.com/Y108497363I">Ver o kit</a>
+    </div>
+    <img src="img/nare-acenando.svg" alt="O Naré, um punaré da Caatinga, acenando">
+  </div>
+</section>
+
+<section class="branco" id="kit">
+  <div class="wrap kit">
+    <img src="img/kit-alfabeto.png" alt="Capa do kit Alfabeto da Cidadania">
+    <div>
+      <h2>Alfabeto da Cidadania</h2>
+      <p class="sub">26 atividades de A a Z · PDF para imprimir</p>
+      <ul>
+        <li><b>30 páginas:</b> capa, orientações para a professora, 26 atividades e 2 páginas de gabarito.</li>
+        <li>Cada letra traz uma palavra-tema: A de Amizade, D de Direito, P de Paz, R de Respeito...</li>
+        <li>Trabalha os direitos da criança junto com a alfabetização, como prevê o art. 32, § 5º, da LDB.</li>
+        <li>Funciona bem em preto e branco. Imprima quantas vezes precisar para as suas turmas.</li>
+      </ul>
+      <p class="preco">R$ 27</p>
+      <a class="btn verde" href="https://go.hotmart.com/Y108497363I">Comprar pela Hotmart</a>
+      <p><span class="selo">Revisado por Eduardo Tosto, advogado (OAB/BA nº 42.205)</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="previa">
+  <div class="wrap">
+    <h2>Veja algumas páginas</h2>
+    <p class="sub">Folhas com contorno grosso e áreas grandes, pensadas para a criança de 6 e 7 anos.</p>
+    <div class="previas">
+      <figure><img src="img/pagina-01.png" alt="Capa do kit" loading="lazy"><figcaption>Capa</figcaption></figure>
+      <figure><img src="img/pagina-03.png" alt="Atividade A de Amizade" loading="lazy"><figcaption>A de Amizade</figcaption></figure>
+      <figure><img src="img/pagina-06.png" alt="Atividade D de Direito" loading="lazy"><figcaption>D de Direito</figcaption></figure>
+      <figure><img src="img/pagina-13.png" alt="Atividade K de Karaokê da turma" loading="lazy"><figcaption>K de Karaokê</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="branco">
+  <div class="wrap" id="amostra">
+    <div class="amostra">
+      <div>
+        <h2>Amostra grátis</h2>
+        <p>Receba 4 páginas do Alfabeto da Cidadania para testar com a sua turma.</p>
+        <p>Deixe seu nome e e-mail e baixe na hora. Avisaremos também quando sair um kit novo.</p>
+        <small>Você pode pedir para sair da lista quando quiser. Veja a <a href="privacidade.html">política de privacidade</a>.</small>
+      </div>
+      <a class="btn" href="https://forms.gle/XXbxzg4FSAQ3pbqW6">Quero a amostra</a>
+    </div>
+  </div>
+</section>
+
+<section id="nare">
+  <div class="wrap nare">
+    <img src="img/nare-lendo.svg" alt="O Naré lendo um livro">
+    <div>
+      <h2>Quem é o Naré?</h2>
+      <p>O Naré é um punaré, um bichinho da Caatinga, que mora no sertão da Bahia. Curioso e perguntador, ele coleciona palavras num caderninho e sonha em ser advogado, para ajudar as pessoas a resolver os problemas com palavras e com justiça.</p>
+      <p>Com a turma dele, as crianças aprendem a ler e a escrever enquanto conversam sobre respeito, regras e direitos.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Turma do Naré. Todos os direitos reservados.</span>
+    <span><a href="privacidade.html">Privacidade</a> · <a href="mailto:turmadonare@gmail.com">turmadonare@gmail.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
