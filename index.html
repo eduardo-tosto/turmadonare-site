@@ -59,14 +59,27 @@
   .nare { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
   .nare img { width: 220px; }
   .selo { display: inline-block; border: 2px solid #ccc; border-radius: 10px; padding: 8px 14px; color: var(--cinza); font-size: 14px; background: var(--branco); }
+  .turma { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .turma > * { min-width: 0; }
+  .amigo { background: var(--branco); border-radius: 20px; padding: 18px 18px 22px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,.07); border-top: 6px solid var(--cor, var(--verde)); }
+  .amigo img { width: 150px; height: 182px; object-fit: contain; display: block; margin: 0 auto 8px; }
+  .amigo h3 { margin: 0 0 4px; font-size: 24px; color: var(--marrom); }
+  .amigo .bicho { margin: 0 0 10px; color: var(--cinza); font-size: 15px; }
+  .amigo p { margin: 4px 0; font-size: 15.5px; }
+  .amigo .rot { display: inline-block; background: var(--creme); border-radius: 999px; padding: 2px 10px; font-size: 13px; color: var(--marrom); margin-right: 4px; }
   footer { background: var(--marrom); color: #f3e9dc; padding: 28px 0; font-size: 14px; }
   footer a { color: #f3e9dc; }
   footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  @media (max-width: 420px) { .turma { grid-template-columns: 1fr; } }
   @media (max-width: 780px) {
     nav { display: none; }
     .hero .wrap, .kit, .nare, .amostra { grid-template-columns: 1fr; }
     .hero img { max-width: 220px; }
     .previas { grid-template-columns: repeat(2, 1fr); }
+    .turma { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .amigo { padding: 14px 10px 16px; }
+    .amigo img { width: 110px; height: 134px; }
+    .amigo h3 { font-size: 20px; }
     .nare img { width: 160px; margin: 0 auto; display: block; }
     .amostra { padding: 26px; }
   }
@@ -76,7 +89,7 @@
 <header>
   <div class="wrap">
     <a class="marca" href="#"><img src="img/nare-perfil.png" alt="Naré">Turma do Naré</a>
-    <nav><a href="#kit">Kits</a><a href="#previa">Prévia</a><a href="#amostra">Amostra grátis</a><a href="#nare">O Naré</a></nav>
+    <nav><a href="#kit">Kits</a><a href="#previa">Prévia</a><a href="#amostra">Amostra grátis</a><a href="#turma">A Turma</a></nav>
   </div>
 </header>
 
@@ -86,6 +99,7 @@
     <div>
       <h1>Alfabetização com <span>cidadania</span>, do jeito do Naré</h1>
       <p>Atividades para imprimir, para o <b>1º e o 2º ano</b>: letras, sílabas, leitura e escrita junto com convivência, respeito e direitos da criança. Cada atividade indica a habilidade da BNCC.</p>
+      <p style="font-size:17px;margin-top:-8px">Com o Naré e a turma de amigos dele, bichos de todas as regiões do Brasil. 🇧🇷</p>
       <a class="btn" href="#amostra">Baixar amostra grátis</a>
       &nbsp; <a class="btn verde" href="https://go.hotmart.com/Y108497363I">Ver o kit</a>
     </div>
@@ -120,7 +134,7 @@
       <figure><img src="img/pagina-01.png" alt="Capa do kit" loading="lazy"><figcaption>Capa</figcaption></figure>
       <figure><img src="img/pagina-03.png" alt="Atividade A de Amizade" loading="lazy"><figcaption>A de Amizade</figcaption></figure>
       <figure><img src="img/pagina-06.png" alt="Atividade D de Direito" loading="lazy"><figcaption>D de Direito</figcaption></figure>
-      <figure><img src="img/pagina-13.png" alt="Atividade K de Karaokê da turma" loading="lazy"><figcaption>K de Karaokê</figcaption></figure>
+      <figure><img src="img/pagina-13.png" alt="Atividade K: Kauã canta com a turma" loading="lazy"><figcaption>K de Kauã</figcaption></figure>
     </div>
   </div>
 </section>
@@ -139,13 +153,17 @@
   </div>
 </section>
 
-<section id="nare">
-  <div class="wrap nare">
-    <img src="img/nare-lendo.svg" alt="O Naré lendo um livro">
-    <div>
-      <h2>Quem é o Naré?</h2>
-      <p>O Naré é um punaré, um bichinho da Caatinga, que mora no sertão da Bahia. Curioso e perguntador, ele coleciona palavras num caderninho e sonha em ser advogado, para ajudar as pessoas a resolver os problemas com palavras e com justiça.</p>
-      <p>Com a turma dele, as crianças aprendem a ler e a escrever enquanto conversam sobre respeito, regras e direitos.</p>
+<section id="turma">
+  <div class="wrap">
+    <h2>Conheça a Turma do Naré</h2>
+    <p class="sub">Amigos de todas as regiões do Brasil. Cada um tem um sonho de profissão e ensina um jeito de conviver e de cuidar do outro.</p>
+    <div class="turma">
+      <div class="amigo" style="--cor:#2E9E6B"><img src="img/turma/nare.svg" alt="Naré, punaré da Caatinga" loading="lazy"><h3>Naré</h3><p class="bicho">punaré da Caatinga</p><p><span class="rot">Mora</span>Sertão da Bahia (Nordeste)</p><p><span class="rot">Sonha ser</span>advogado</p><p style="margin-top:10px">Curioso e perguntador, coleciona palavras num caderninho. Quer ajudar as pessoas a resolver problemas com palavras e com justiça.</p></div>
+      <div class="amigo" style="--cor:#E86A8A"><img src="img/turma/bia.svg" alt="Bia, boto-cor-de-rosa" loading="lazy"><h3>Bia</h3><p class="bicho">boto-cor-de-rosa</p><p><span class="rot">Mora</span>Amazônia (Norte)</p><p><span class="rot">Sonha ser</span>médica</p><p style="margin-top:10px">Cuida de todo mundo e ensina a turma a lavar as mãos e a cuidar da saúde.</p></div>
+      <div class="amigo" style="--cor:#F6B73C"><img src="img/turma/juju.svg" alt="Juju, onça-pintada" loading="lazy"><h3>Juju</h3><p class="bicho">onça-pintada</p><p><span class="rot">Mora</span>Pantanal (Centro-Oeste)</p><p><span class="rot">Sonha ser</span>bombeira</p><p style="margin-top:10px">Corajosa e protetora, cuida da natureza e da segurança de todos.</p></div>
+      <div class="amigo" style="--cor:#E3892A"><img src="img/turma/leco.svg" alt="Leco, mico-leão-dourado" loading="lazy"><h3>Leco</h3><p class="bicho">mico-leão-dourado</p><p><span class="rot">Mora</span>Mata Atlântica (Sudeste)</p><p><span class="rot">Sonha ser</span>professor</p><p style="margin-top:10px">Adora ler histórias e acha que todo mundo tem o direito de aprender.</p></div>
+      <div class="amigo" style="--cor:#3A7BD5"><img src="img/turma/lia.svg" alt="Lia, gralha-azul" loading="lazy"><h3>Lia</h3><p class="bicho">gralha-azul</p><p><span class="rot">Mora</span>Mata de araucárias (Sul)</p><p><span class="rot">Sonha ser</span>vereadora</p><p style="margin-top:10px">Gosta de ouvir todo mundo e de combinar regras justas para a turma.</p></div>
+      <div class="amigo" style="--cor:#25875B"><img src="img/turma/zeca.svg" alt="Zeca, fila brasileiro" loading="lazy"><h3>Zeca</h3><p class="bicho">fila brasileiro</p><p><span class="rot">Mora</span>Minas Gerais (Sudeste)</p><p><span class="rot">Sonha ser</span>policial</p><p style="margin-top:10px">Ensina as regras da rua: olhar para os dois lados e atravessar na faixa.</p></div>
     </div>
   </div>
 </section>
